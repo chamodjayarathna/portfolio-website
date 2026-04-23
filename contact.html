@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio - Contact</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Chamod <span class="dot">.</span></a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero" style="min-height: 40vh; padding: 120px 0 40px;">
+        <div class="container">
+            <div class="section-heading">
+                <p class="section-kicker">Get In Touch</p>
+                <h2>Contact Me</h2>
+                <p class="section-intro">
+                    Have a question or want to connect? Feel free to reach out!
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-form-section" style="padding: 40px 0 80px;">
+        <div class="container">
+            <div class="skill-card" style="max-width: 600px; margin: 0 auto;">
+                <form id="contact-form">
+                    <div style="margin-bottom: 20px;">
+                        <label for="name" style="display: block; margin-bottom: 5px; color: var(--text-muted);">Name</label>
+                        <input type="text" id="name" name="name" required style="width: 100%; padding: 12px; background: var(--primary-bg); border: 1px solid rgba(255, 255, 255, 0.1); color: var(--text-main); border-radius: 5px;">
+                    </div>
+                    <div style="margin-bottom: 20px;">
+                        <label for="email" style="display: block; margin-bottom: 5px; color: var(--text-muted);">Email</label>
+                        <input type="email" id="email" name="email" required style="width: 100%; padding: 12px; background: var(--primary-bg); border: 1px solid rgba(255, 255, 255, 0.1); color: var(--text-main); border-radius: 5px;">
+                    </div>
+                    <div style="margin-bottom: 20px;">
+                        <label for="subject" style="display: block; margin-bottom: 5px; color: var(--text-muted);">Subject</label>
+                        <input type="text" id="subject" name="subject" required style="width: 100%; padding: 12px; background: var(--primary-bg); border: 1px solid rgba(255, 255, 255, 0.1); color: var(--text-main); border-radius: 5px;">
+                    </div>
+                    <div style="margin-bottom: 20px;">
+                        <label for="message" style="display: block; margin-bottom: 5px; color: var(--text-muted);">Message</label>
+                        <textarea id="message" name="message" required style="width: 100%; padding: 12px; background: var(--primary-bg); border: 1px solid rgba(255, 255, 255, 0.1); color: var(--text-main); border-radius: 5px; height: 150px;"></textarea>
+                    </div>
+                    <button type="submit" class="btn" style="width: 100%; cursor: pointer; border: none;">Send Message</button>
+                    <div id="form-message" style="margin-top: 20px; padding: 15px; border-radius: 5px; display: none; text-align: center;"></div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Chamod Jayarathna</p>
+            <p>University of Moratuwa - Faculty of Information Technology</p>
+        </div>
+    </footer>
+
+    
+    <script>
+        // Inline script for form handling 
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('name').value;
+            const formMessage = document.getElementById('form-message');
+            
+            formMessage.textContent = `Thank you, ${name}! Your message has been received.`;
+            formMessage.style.display = 'block';
+            formMessage.style.backgroundColor = 'rgba(56, 189, 248, 0.1)';
+            formMessage.style.color = 'var(--accent-color)';
+            formMessage.style.border = '1px solid var(--accent-color)';
+            
+            this.reset();
+        });
+    </script>
+</body>
+</html>
