@@ -309,6 +309,11 @@ body {
     user-select: none;
 }
 
+.name-line {
+    display: flex;
+    gap: 350px;
+   
+}
 
 /* --- Blog Section --- */
 .blog-content {
