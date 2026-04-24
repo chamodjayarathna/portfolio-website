@@ -153,11 +153,11 @@ body {
 }
 
 .hero-image img {
-    width: 300px;
-    height: 300px;
+    width: 100%;
+    max-width: 320px;
     border-radius: 50%;
-    border: 5px solid var(--accent-color);
-    object-fit: cover;
+    border: 5px solid rgba(56, 189, 248, 0.4);
+    background-color: #0f172a;
 }
 
 
