@@ -362,11 +362,23 @@ footer p {
   margin-bottom: 5px;
 }
 
+/* hide hamburger on desktop */
+.hamburger {
+  display: none;
+}
+
 /* --- Responsive Design --- */
 @media (max-width: 768px) {
   .hero-content {
     flex-direction: column-reverse;
     text-align: center;
+  }
+
+  .hamburger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
   }
 
   .hero-text h1 {
