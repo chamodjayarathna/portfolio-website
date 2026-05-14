@@ -365,6 +365,17 @@ footer p {
 /* hide hamburger on desktop */
 .hamburger {
   display: none;
+  cursor: pointer;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.hamburger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: var(--text-main);
+  border-radius: 2px;
 }
 
 /* --- Responsive Design --- */
@@ -372,13 +383,6 @@ footer p {
   .hero-content {
     flex-direction: column-reverse;
     text-align: center;
-  }
-
-  .hamburger {
-    display: flex;
-    flex-direction: column;
-    cursor: pointer;
-    gap: 5px;
   }
 
   .hero-text h1 {
@@ -389,8 +393,25 @@ footer p {
     justify-content: center;
   }
 
+  .hamburger {
+    display: flex;
+  }
+
   .nav-links {
-    display: none; /* Hamburger menu logic would go here */
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: var(--secondary-bg);
+    padding: 20px 0;
+    text-align: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .nav-links.active {
+    display: flex;
   }
 
   .hero-image {
