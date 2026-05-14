@@ -12,9 +12,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Basic menu toggle for mobile users
   var burger = document.querySelector(".hamburger");
+  var nav = document.querySelector(".nav-links");
   if (burger) {
     burger.onclick = function () {
-      document.querySelector(".nav-links").classList.toggle("active");
+      nav.classList.toggle("active");
     };
   }
 });
